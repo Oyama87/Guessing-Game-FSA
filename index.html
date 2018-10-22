@@ -6,29 +6,32 @@
   </head>
   <body>
     <div id='header'>
-      <h1>Guess The Number!</h1>
+      <h1> Guess The Number! </h1>
     </div>
     
-    <div id='top-button'>
-      <button class='extra-button'>Button 1</button>
+    <p id='hint'>Make a guess!</p>
+    
+    <div id='prev-guess-list'>
+      <span class='prev-guess' id='guess1'>###</span>
+      <span class='prev-guess' id='guess2'>###</span>
+      <span class='prev-guess' id='guess3'>###</span>
+      <span class='prev-guess' id='guess4'>###</span>
+      <span class='prev-guess' id='guess5'>###</span>
     </div>
     
     <div id='main'>
-      <button class='extra-button'>Button 2</button>
+      <button class='extra-button' id='helper'>Hint</button>
       
       <div id='guess-holder'>
-          <input id='guess' maxlength=3 size=3>  
+          <input id='guess' placeholder='???' maxlength=3 size=3>  
       </div>
       
-      
-      <button class='extra-button' type='submit'>
-          Submit
-      </button>
-      </div>
+      <button class='extra-button' id='submit'>Guess!</button>
+    </div>
     
-      <div id='bottom-button'>
-        <button class='extra-button'>Button 4</button>
-      </div>
+    <div id='bottom-button'>
+      <button class='extra-button' id='reset'>Reset</button>
+    </div>
     
     
     <script src='js/game.js'></script>
