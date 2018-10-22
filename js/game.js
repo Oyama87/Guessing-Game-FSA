@@ -1,4 +1,5 @@
 /*eslint-disable complexity*/
+// changed to try to force rebuild on github pages
 let coldColor = "cyan";
 let warmColor = "yellow";
 let hotColor = "red";
