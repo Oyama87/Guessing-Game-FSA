@@ -37,7 +37,7 @@ function resetGame() {
   }
   hint.style.color = "white";
   hint.style.backgroundColor = "rgba(0,0,0,0)";
-  hint.innerHTML = "Make a guess!";
+  hint.innerHTML = "Make a guess between 1 and 100!";
   helper.disabled = false;
   submitButton.disabled = false;
   userInput.disabled = false;
