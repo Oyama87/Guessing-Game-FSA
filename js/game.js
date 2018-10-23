@@ -2,7 +2,7 @@
 // changed to try to force rebuild on github pages
 let coldColor = "cyan";
 let warmColor = "yellow";
-let hotColor = "red";
+let hotColor = "orangered";
 let winColor = "limegreen";
 let prevGuessCounter = 0;
 
@@ -60,6 +60,14 @@ function endGame(textColor, bgColor, message) {
 }
 
 function submitGuess() {
+  console.log(Number(userInput.value));
+  if(isNaN(Number(userInput.value))) {
+    hint.style.color = 'white';
+    hint.style.backgroundColor = "rgba(0,0,0,0)";
+    hint.innerHTML = "Invalid input, try again.";
+    userInput.value = "";
+    return;
+  }
   prevGuessCounter++;
   let userGuess = Number(userInput.value),
     distance = theNumber - userGuess,
@@ -68,9 +76,9 @@ function submitGuess() {
     prevGuessBox = document.getElementById(`guess${prevGuessCounter}`),
     loseMessage = `Sorry, you lose the game! The number was ${theNumber}. Press Reset to play again.`,
     winMessage = "You Win! Press Reset to play again!",
-    coldMessage = `You're so cold! Try guessing ${whichWay}!`,
+    coldMessage = `You're getting colder! Try guessing ${whichWay}!`,
     warmMessage = `You're getting warmer! Try guessing ${whichWay}!`,
-    hotMessage = `You're so hot! Try guessing ${whichWay}!`;
+    hotMessage = `You're getting hotter! Try guessing ${whichWay}!`;
 
   userInput.value = "";
   userInput.focus();
